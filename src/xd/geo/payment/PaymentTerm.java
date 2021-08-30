@@ -23,6 +23,8 @@ public class PaymentTerm {
         dueDate.set(year, month, day);
         System.out.println(dueDate.getTime());
 
+        System.out.println(dueDate.getInstance());
 
     }
 }
+
