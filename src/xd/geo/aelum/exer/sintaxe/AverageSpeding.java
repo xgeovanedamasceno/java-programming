@@ -1,4 +1,4 @@
-package xd.geo.aelum;
+package xd.geo.aelum.exer.sintaxe;
 
 public class AverageSpeding {
     public static void main(String[] args) {
