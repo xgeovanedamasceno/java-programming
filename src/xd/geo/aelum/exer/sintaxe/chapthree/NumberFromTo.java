@@ -1,4 +1,4 @@
-package xd.geo.aelum.exer.sintaxe;
+package xd.geo.aelum.exer.sintaxe.chapthree;
 
 public class NumberFromTo {
     public static void main(String[] args) {
@@ -7,6 +7,6 @@ public class NumberFromTo {
         do {
             System.out.println(num);
             num++;
-        } while(num <= 300);
+        } while(num < 300);
     }
 }
