@@ -4,7 +4,7 @@ public class BankAccount {
     String name;
     int number;
     double balance;
-    String openingDate;
+    Date openingDate;
 
     boolean withdraw(double value) {
         this.balance = this.balance - value;
@@ -25,7 +25,7 @@ public class BankAccount {
         System.out.println("Account Name: " + this.name);
         System.out.println("Account Number: " + this.number);
         System.out.println("Account Balance: " + this.balance);
-        System.out.println("Account Opening Date: " + this.openingDate);
+        System.out.println("Account Opening Date: " + this.openingDate.formattedDate());
     }
 
 

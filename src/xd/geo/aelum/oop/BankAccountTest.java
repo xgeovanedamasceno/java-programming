@@ -7,10 +7,14 @@ public class BankAccountTest {
         acc.name = "Mark";
         acc.number = 1245;
         acc.balance = 200.00;
-        acc.openingDate = "02/09/2021";
 
+        Date date = new Date();
+        date.day = 2;
+        date.month = 8;
+        date.year = 2021;
+
+        acc.openingDate = date;
         acc.retrievesDataForPrint();
-
 
         acc.withdraw(50);
         System.out.println(acc.balance);
@@ -21,13 +25,13 @@ public class BankAccountTest {
 
         BankAccount acb = acc;
 
-
-
         if(acc == acb) {
             System.out.println("true");
         } else {
             System.out.println("false");
         }
+
+
 
 
     }
