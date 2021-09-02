@@ -19,7 +19,7 @@ public class BankAccountTest {
         acc.put(25);
         System.out.println(acc.balance);
 
-        System.out.println(acc.calculaRendimento());
+        System.out.println(acc.calcIncome());
 
     }
 }
