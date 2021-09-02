@@ -21,6 +21,7 @@ public class BankAccount {
     }
 
     void retrievesDataForPrint() {
+        // sout here ?
         System.out.println("Account Name: " + this.name);
         System.out.println("Account Number: " + this.number);
         System.out.println("Account Balance: " + this.balance);
