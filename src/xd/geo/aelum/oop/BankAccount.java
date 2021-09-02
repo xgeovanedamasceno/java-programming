@@ -16,8 +16,15 @@ public class BankAccount {
         return true;
     }
 
-    double calculaRendimento() {
+    double calcIncome() {
         return this.balance * 0.01;
+    }
+
+    void retrievesDataForPrint() {
+        System.out.println("Account Name: " + this.name);
+        System.out.println("Account Number: " + this.number);
+        System.out.println("Account Balance: " + this.balance);
+        System.out.println("Account Opening Date: " + this.openingDate);
     }
 
 
