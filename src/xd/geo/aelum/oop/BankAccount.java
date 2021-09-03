@@ -1,19 +1,34 @@
 package xd.geo.aelum.oop;
 
 public class BankAccount {
-    private String name;
     static int number;
     private int id;
+    private String name;
+
     private double balance;
     private Date openingDate;
 
-    BankAccount() {
+    BankAccount(Date date, String name) {
+        BankAccount.setNumber();
+        this.setId();
+        this.setOpeningDate(date);
+        this.setName(name);
+    }
+
+    private static void setNumber() {
         BankAccount.number += 1;
-        this.id = BankAccount.getNumber();
+    }
+
+    public static int getNumber() {
+        return BankAccount.number;
     }
 
     public int getId() {
-        return id;
+        return this.id;
+    }
+
+    private void setId() {
+        this.id = BankAccount.getNumber();
     }
 
     public String getName() {
@@ -24,42 +39,38 @@ public class BankAccount {
         this.name = name;
     }
 
-    public static int getNumber() {
-        return BankAccount.number;
-    }
-
     public double getBalance() {
         return balance;
     }
 
-    public void setOpeningDate(Date openingDate) {
-        this.openingDate = openingDate;
+    public String getOpeningDate() {
+        return this.openingDate.getFormattedDate();
     }
 
-    public Date getOpeningDate() {
-        return openingDate;
+    private void setOpeningDate(Date date) {
+        this.openingDate = date;
     }
 
-    boolean withdraw(double value) {
+    public boolean withdraw(double value) {
         this.balance = this.balance - value;
         return true;
     }
 
-    boolean put(double value) {
+    public boolean put(double value) {
         this.balance = this.balance + value;
         return true;
     }
 
-    double calcIncome() {
+    public double getYield() {
         return this.balance * 0.01;
     }
 
-    void retrievesDataForPrint() {
+    public void getDataForPrint() {
         // sout here ?
         System.out.println("Account Name: " + this.getName());
         System.out.println("Account Number: " + this.getId());
         System.out.println("Account Balance: " + this.getBalance());
-        System.out.println("Account Opening Date: " + this.getOpeningDate().formattedDate());
+        System.out.println("Account Opening Date: " + this.getOpeningDate());
     }
 
 
