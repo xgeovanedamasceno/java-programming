@@ -1,6 +1,6 @@
 package xd.geo.aelum.oop;
 
-public class BankAccount {
+public abstract class BankAccount {
     static int number;
     private int id;
     private String name;
@@ -43,6 +43,10 @@ public class BankAccount {
         return balance;
     }
 
+    protected void setBalance(double balance) {
+        this.balance = balance;
+    }
+
     public String getOpeningDate() {
         return this.openingDate.getFormattedDate();
     }
@@ -65,15 +69,21 @@ public class BankAccount {
         return this.balance * 0.01;
     }
 
-    public void getDataForPrint() {
+    protected void getDataForPrint() {
         // sout here ?
         System.out.println("Account Name: " + this.getName());
         System.out.println("Account Number: " + this.getId());
         System.out.println("Account Balance: " + this.getBalance());
         System.out.println("Account Opening Date: " + this.getOpeningDate());
+        System.out.println(" ");
     }
 
+    protected abstract String getType();
 
+    protected void transfer(double value, BankAccount destiny) {
+        this.balance -= value;
+        destiny.put(value);
+    }
 
 
 }

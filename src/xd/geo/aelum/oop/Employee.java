@@ -1,6 +1,6 @@
 package xd.geo.aelum.oop;
 
-public class Employee {
+public abstract class Employee {
     private String name;
     private String cpf;
     private double salary;
@@ -13,7 +13,5 @@ public class Employee {
         return salary;
     }
 
-    public double getBonus() {
-        return getSalary() * 0.10;
-    }
+    public abstract double getBonus();
 }
