@@ -5,7 +5,8 @@ public class Manager extends Employee {
     private int numberOfAssistants;
     private String password;
 
+    @Override
     public double getBonus() {
-        return this.getSalary() * 0.15;
+        return super.getBonus() + 1000;
     }
 }
