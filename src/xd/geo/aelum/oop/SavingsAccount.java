@@ -11,4 +11,9 @@ public class SavingsAccount extends BankAccount {
     public void getType() {
         System.out.println("Savings Account");
     }
+
+    public void transfer(double value, BankAccount destiny) {
+        super.transfer(value, destiny);
+        super.setBalance(super.getBalance() - 1.00);
+    }
 }

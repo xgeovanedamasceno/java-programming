@@ -5,11 +5,22 @@ public class BankAccountTest {
 
         Date date = new Date(31,2,2021);
 
-        BankAccount acc = new BankAccount(date, "Mark");
-        BankAccount acb = new BankAccount(date, "Zoe");
+        BankAccount svAc = new SavingsAccount(date, "Mark");
+        BankAccount ckAc = new CheckingAccount(date, "Zoe");
 
-        acc.getDataForPrint();
-        acb.getDataForPrint();
+        svAc.put(1000);
+        ckAc.put(2000);
+
+        ckAc.transfer(500, svAc);
+
+        svAc.transfer(0.10, ckAc);
+
+        svAc.getDataForPrint();
+
+
+        ckAc.getDataForPrint();
+
+
 
 
     }

@@ -12,4 +12,10 @@ public class CheckingAccount extends BankAccount {
     }
 
 
+    public void transfer(double value, BankAccount destiny) {
+        super.transfer(value, destiny);
+        super.setBalance(super.getBalance() - 0.10);
+    }
+
+
 }

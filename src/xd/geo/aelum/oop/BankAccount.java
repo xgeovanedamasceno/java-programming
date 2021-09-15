@@ -43,6 +43,10 @@ public class BankAccount {
         return balance;
     }
 
+    protected void setBalance(double balance) {
+        this.balance = balance;
+    }
+
     public String getOpeningDate() {
         return this.openingDate.getFormattedDate();
     }
@@ -74,7 +78,13 @@ public class BankAccount {
     }
 
     protected void getType() {
+        System.out.println("Bank Account");
+    }
 
+    protected void transfer(double value, BankAccount destiny) {
+
+        this.balance -= value;
+        destiny.put(value);
     }
 
 
