@@ -1,6 +1,6 @@
 package xd.geo.aelum.oop;
 
-public class BankAccount {
+public abstract class BankAccount {
     static int number;
     private int id;
     private String name;
@@ -78,12 +78,9 @@ public class BankAccount {
         System.out.println(" ");
     }
 
-    protected String getType() {
-        return "Account";
-    }
+    protected abstract String getType();
 
     protected void transfer(double value, BankAccount destiny) {
-
         this.balance -= value;
         destiny.put(value);
     }

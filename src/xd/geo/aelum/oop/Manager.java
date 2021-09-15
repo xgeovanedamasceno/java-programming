@@ -7,6 +7,7 @@ public class Manager extends Employee {
 
     @Override
     public double getBonus() {
-        return super.getBonus() + 1000;
+        double v = super.getSalary() * 0.15;
+        return v;
     }
 }

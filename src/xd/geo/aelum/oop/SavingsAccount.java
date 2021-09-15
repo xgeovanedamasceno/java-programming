@@ -7,10 +7,7 @@ public class SavingsAccount extends BankAccount {
         super(date, name);
     }
 
-    @Override
-    public String getType() {
-        return "Savings " + super.getType();
-    }
+
 
     @Override
     public void transfer(double value, BankAccount destiny) {
@@ -22,5 +19,10 @@ public class SavingsAccount extends BankAccount {
     public void getDataForPrint() {
         System.out.println(this.getType());
         super.getDataForPrint();
+    }
+
+    @Override
+    protected String getType() {
+        return "Savings Account";
     }
 }

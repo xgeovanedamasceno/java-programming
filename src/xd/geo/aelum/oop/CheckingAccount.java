@@ -8,7 +8,7 @@ public class CheckingAccount extends BankAccount {
 
     @Override
     public String getType() {
-        return "Checking " + super.getType();
+        return "Checking Account";
     }
 
     @Override
