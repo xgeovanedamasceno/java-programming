@@ -7,5 +7,10 @@ public class EmployeeTest {
 
         man1.setSalary(1000);
         System.out.println(man1.getBonus());
+
+        Manager man2 = new Manager();
+        Employee emp1 = man2;
+        emp1.setSalary(2000);
+        System.out.println(emp1.getBonus());
     }
 }
