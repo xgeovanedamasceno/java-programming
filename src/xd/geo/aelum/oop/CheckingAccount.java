@@ -7,14 +7,20 @@ public class CheckingAccount extends BankAccount {
     }
 
     @Override
-    public void getType() {
-        System.out.println("Checking Account");
+    public String getType() {
+        return "Checking " + super.getType();
     }
 
-
+    @Override
     public void transfer(double value, BankAccount destiny) {
         super.transfer(value, destiny);
         super.setBalance(super.getBalance() - 0.10);
+    }
+
+    @Override
+    public void getDataForPrint() {
+        System.out.println(this.getType());
+        super.getDataForPrint();
     }
 
 

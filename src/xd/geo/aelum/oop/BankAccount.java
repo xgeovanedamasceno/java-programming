@@ -69,16 +69,17 @@ public class BankAccount {
         return this.balance * 0.01;
     }
 
-    public void getDataForPrint() {
+    protected void getDataForPrint() {
         // sout here ?
         System.out.println("Account Name: " + this.getName());
         System.out.println("Account Number: " + this.getId());
         System.out.println("Account Balance: " + this.getBalance());
         System.out.println("Account Opening Date: " + this.getOpeningDate());
+        System.out.println(" ");
     }
 
-    protected void getType() {
-        System.out.println("Bank Account");
+    protected String getType() {
+        return "Account";
     }
 
     protected void transfer(double value, BankAccount destiny) {

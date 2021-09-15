@@ -8,12 +8,19 @@ public class SavingsAccount extends BankAccount {
     }
 
     @Override
-    public void getType() {
-        System.out.println("Savings Account");
+    public String getType() {
+        return "Savings " + super.getType();
     }
 
+    @Override
     public void transfer(double value, BankAccount destiny) {
         super.transfer(value, destiny);
         super.setBalance(super.getBalance() - 1.00);
+    }
+
+    @Override
+    public void getDataForPrint() {
+        System.out.println(this.getType());
+        super.getDataForPrint();
     }
 }
