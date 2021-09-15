@@ -5,4 +5,11 @@ public class CheckingAccount extends BankAccount {
     CheckingAccount(Date date, String name) {
         super(date, name);
     }
+
+    @Override
+    public void getType() {
+        System.out.println("Checking Account");
+    }
+
+
 }

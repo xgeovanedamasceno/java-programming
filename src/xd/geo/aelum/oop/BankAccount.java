@@ -73,7 +73,9 @@ public class BankAccount {
         System.out.println("Account Opening Date: " + this.getOpeningDate());
     }
 
+    protected void getType() {
 
+    }
 
 
 }
