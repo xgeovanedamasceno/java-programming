@@ -3,7 +3,7 @@ package xd.geo.exceptions;
 import xd.geo.aelum.oop.CheckingAccount;
 import xd.geo.aelum.oop.Date;
 
-public class ErrorTest {
+public class ExceptionTest {
     public static void main(String[] args) {
         System.out.println("Start main()");
         try {
