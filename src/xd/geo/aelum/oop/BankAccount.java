@@ -56,13 +56,23 @@ public abstract class BankAccount {
     }
 
     public boolean withdraw(double value) {
-        this.balance = this.balance - value;
-        return true;
+        if (value > this.balance || value <= 0) {
+            throw new IllegalArgumentException("Insufficient funds or inappropriate value");
+        } else {
+            this.balance = this.balance - value;
+            return true;
+        }
+
     }
 
     public boolean put(double value) {
-        this.balance = this.balance + value;
-        return true;
+        if (value <= 0) {
+            throw new IllegalArgumentException("Inappropriate value or insufficient");
+        } else {
+            this.balance = this.balance + value;
+            return true;
+        }
+
     }
 
     public double getYield() {
@@ -81,8 +91,15 @@ public abstract class BankAccount {
     protected abstract String getType();
 
     protected void transfer(double value, BankAccount destiny) {
-        this.balance -= value;
-        destiny.put(value);
+        if(value > this.balance || value <= 0) {
+            throw new IllegalArgumentException("Insufficient funds or inappropriate value");
+        } else if (destiny == null) {
+            throw new IllegalArgumentException("Invalid Destination Account");
+        } else {
+            this.balance -= value;
+            destiny.put(value);
+        }
+
     }
 
 
