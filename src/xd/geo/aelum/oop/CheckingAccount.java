@@ -2,7 +2,7 @@ package xd.geo.aelum.oop;
 
 public class CheckingAccount extends BankAccount implements Taxable {
 
-    CheckingAccount(Date date, String name) {
+    public CheckingAccount(Date date, String name) {
         super(date, name);
     }
 

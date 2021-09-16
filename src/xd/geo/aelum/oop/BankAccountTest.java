@@ -8,18 +8,43 @@ public class BankAccountTest {
         BankAccount svAc = new SavingsAccount(date, "Mark");
         BankAccount ckAc = new CheckingAccount(date, "Zoe");
 
-        svAc.put(1000);
-        ckAc.put(2000);
+        try {
+            svAc.put(1000);
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        }
 
-        ckAc.transfer(500, svAc);
+        try {
+            ckAc.put(2000);
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        }
 
-        svAc.transfer(0.10, ckAc);
+
+
+        try {
+            ckAc.transfer(-500, svAc);
+        } catch (InsufficientBalanceException e) {
+            System.out.println(e.getMessage());
+        }
+
+        try {
+            svAc.transfer(0.10, ckAc);
+        } catch (InsufficientBalanceException e) {
+            System.out.println(e.getMessage());
+        }
+        System.out.println("");
 
         svAc.getDataForPrint();
 
 
         ckAc.getDataForPrint();
 
+        try {
+            svAc.put(-10);
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        }
 
 
 

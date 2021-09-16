@@ -5,7 +5,7 @@ public class Date {
     private int month;
     private int year;
 
-    Date(int day, int month, int year) {
+    public Date(int day, int month, int year) {
         if(month == 2) {
             if(day == 30 || day == 31) {
                 this.day = 29;
