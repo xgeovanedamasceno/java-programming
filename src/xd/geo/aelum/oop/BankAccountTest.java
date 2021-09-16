@@ -23,16 +23,17 @@ public class BankAccountTest {
 
 
         try {
-            ckAc.transfer(500, svAc);
-        } catch (IllegalArgumentException e) {
+            ckAc.transfer(-500, svAc);
+        } catch (InsufficientBalanceException e) {
             System.out.println(e.getMessage());
         }
 
         try {
             svAc.transfer(0.10, ckAc);
-        } catch (IllegalArgumentException e) {
+        } catch (InsufficientBalanceException e) {
             System.out.println(e.getMessage());
         }
+        System.out.println("");
 
         svAc.getDataForPrint();
 

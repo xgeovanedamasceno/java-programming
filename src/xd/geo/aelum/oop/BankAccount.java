@@ -57,7 +57,7 @@ public abstract class BankAccount {
 
     public boolean withdraw(double value) {
         if (value > this.balance || value <= 0) {
-            throw new IllegalArgumentException("Insufficient funds or inappropriate value");
+            throw new InsufficientBalanceException("Insufficient funds or inappropriate value", value);
         } else {
             this.balance = this.balance - value;
             return true;
@@ -92,9 +92,9 @@ public abstract class BankAccount {
 
     protected void transfer(double value, BankAccount destiny) {
         if(value > this.balance || value <= 0) {
-            throw new IllegalArgumentException("Insufficient funds or inappropriate value");
+            throw new InsufficientBalanceException("Insufficient funds or inappropriate value", value);
         } else if (destiny == null) {
-            throw new IllegalArgumentException("Invalid Destination Account");
+            throw new InsufficientBalanceException("Invalid Destination Account", value);
         } else {
             this.balance -= value;
             destiny.put(value);
