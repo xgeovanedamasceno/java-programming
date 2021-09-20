@@ -88,6 +88,16 @@ public abstract class BankAccount {
         System.out.println(" ");
     }
 
+    @Override
+    public String toString() {
+        return "BankAccount{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", balance=" + balance +
+                ", openingDate=" + openingDate +
+                '}';
+    }
+
     protected abstract String getType();
 
     protected void transfer(double value, BankAccount destiny) {

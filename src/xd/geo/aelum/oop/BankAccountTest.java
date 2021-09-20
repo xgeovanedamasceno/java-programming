@@ -8,7 +8,7 @@ public class BankAccountTest {
         BankAccount svAc = new SavingsAccount(date, "Mark");
         BankAccount ckAc = new CheckingAccount(date, "Zoe");
 
-        try {
+       /* try {
             svAc.put(1000);
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
@@ -38,6 +38,8 @@ public class BankAccountTest {
         svAc.getDataForPrint();
 
 
+
+
         ckAc.getDataForPrint();
 
         try {
@@ -47,8 +49,11 @@ public class BankAccountTest {
         }
 
 
+*/
+        System.out.println("*********");
 
-
+        System.out.println(svAc.toString());
+        System.out.println(ckAc.toString());
 
     }
 }
