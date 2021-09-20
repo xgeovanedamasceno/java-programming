@@ -8,6 +8,14 @@ public class BankAccountTest {
         BankAccount svAc = new SavingsAccount(date, "Mark");
         BankAccount ckAc = new CheckingAccount(date, "Zoe");
 
+        svAc.setNumberAccount("1235");
+        svAc.setNumberAgency("456");
+        ckAc.setNumberAccount("123");
+        ckAc.setNumberAgency("456");
+
+        var ret = ckAc.equals(date);
+        System.out.println(ret);
+
        /* try {
             svAc.put(1000);
         } catch (IllegalArgumentException e) {
