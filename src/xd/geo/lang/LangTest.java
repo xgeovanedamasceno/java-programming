@@ -33,8 +33,10 @@ public class LangTest {
         System.out.println("Ot.length: " + ot.length());
         System.out.println("im.length: " + im.length());
         System.out.println(ot.length()+im.length());
-        var stsum = im + "b";
-        StringBuilder sb = new StringBuilder(stsum);
-        System.out.println(sb.capacity());
+
+
+
+
+
     }
 }
