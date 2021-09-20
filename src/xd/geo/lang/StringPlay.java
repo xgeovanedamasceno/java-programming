@@ -9,6 +9,11 @@ public class StringPlay {
     }
 
     public static void inverse(String text) {
-        for (int i= text.length()-1; i >= 0; i--) System.out.print(text.charAt(i));
+        StringBuilder bText = new StringBuilder(text);
+        for (int i= bText.length()-1; i >= 0; i--)
+            System.out.print(bText.charAt(i));
     }
+
+
+
 }
