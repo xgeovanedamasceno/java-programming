@@ -21,5 +21,13 @@ public class LangTest {
         System.out.println(emptyString.isBlank());
         System.out.println(im.isEmpty());
         System.out.println(im.isBlank());
+
+        var today = im;
+        System.out.println(today.length());
+        StringPlay.loop(today);
+
+        StringPlay.inverse(today);
+
+
     }
 }
