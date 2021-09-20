@@ -5,6 +5,9 @@ public abstract class BankAccount {
     private int id;
     private String name;
 
+    private String numberAccount;
+    private String numberAgency;
+
     private double balance;
     private Date openingDate;
 
@@ -13,6 +16,22 @@ public abstract class BankAccount {
         this.setId();
         this.setOpeningDate(date);
         this.setName(name);
+    }
+
+    public String getNumberAccount() {
+        return numberAccount;
+    }
+
+    public void setNumberAccount(String numberAccount) {
+        this.numberAccount = numberAccount;
+    }
+
+    public String getNumberAgency() {
+        return numberAgency;
+    }
+
+    public void setNumberAgency(String numberAgency) {
+        this.numberAgency = numberAgency;
     }
 
     private static void setNumber() {
@@ -88,6 +107,29 @@ public abstract class BankAccount {
         System.out.println(" ");
     }
 
+    @Override
+    public String toString() {
+        String stringInfo = "BankAccount{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", balance=" + balance +
+                ", openingDate=" + openingDate +
+                '}';
+
+        return stringInfo.toUpperCase();
+    }
+
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+
+        BankAccount otherAccount = (BankAccount) obj;
+
+         return this.numberAccount == otherAccount.getNumberAccount() &&
+                this.getNumberAgency().equals(otherAccount.getNumberAgency());
+    }
+
     protected abstract String getType();
 
     protected void transfer(double value, BankAccount destiny) {
@@ -98,6 +140,8 @@ public abstract class BankAccount {
         } else {
             this.balance -= value;
             destiny.put(value);
+            String nameDestiny = destiny.getName().toUpperCase();
+            System.out.println("Amount transfered to "+ nameDestiny + " successfully" );
         }
 
     }
