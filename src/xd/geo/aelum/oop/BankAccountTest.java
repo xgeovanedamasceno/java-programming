@@ -13,10 +13,10 @@ public class BankAccountTest {
         ckAc.setNumberAccount("123");
         ckAc.setNumberAgency("456");
 
-        var ret = ckAc.equals(date);
+        var ret = ckAc.equals(svAc);
         System.out.println(ret);
 
-       /* try {
+        try {
             svAc.put(1000);
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
@@ -57,7 +57,6 @@ public class BankAccountTest {
         }
 
 
-*/
         System.out.println("*********");
 
         System.out.println(svAc.toString());

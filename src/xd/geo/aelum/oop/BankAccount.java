@@ -109,12 +109,14 @@ public abstract class BankAccount {
 
     @Override
     public String toString() {
-        return "BankAccount{" +
+        String stringInfo = "BankAccount{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", balance=" + balance +
                 ", openingDate=" + openingDate +
                 '}';
+
+        return stringInfo.toUpperCase();
     }
 
     public boolean equals(Object obj) {
@@ -138,6 +140,8 @@ public abstract class BankAccount {
         } else {
             this.balance -= value;
             destiny.put(value);
+            String nameDestiny = destiny.getName().toUpperCase();
+            System.out.println("Amount transfered to "+ nameDestiny + " successfully" );
         }
 
     }

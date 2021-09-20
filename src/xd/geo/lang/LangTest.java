@@ -7,5 +7,19 @@ public class LangTest {
 
         PrintStream exit = System.out;
         exit.println("Hello World");
+
+        String im = "   TodayIsMonday 19 ";
+        im = im.replace("19", "20");
+        System.out.println(im);
+        System.out.println(im.length());
+        System.out.println(im.contains("Monday"));
+        System.out.println(im.contains("monday"));
+        im = im.trim();
+        System.out.println(im);
+        String emptyString = "     ";
+        System.out.println(emptyString.isEmpty());
+        System.out.println(emptyString.isBlank());
+        System.out.println(im.isEmpty());
+        System.out.println(im.isBlank());
     }
 }
