@@ -1,21 +1,24 @@
 package xd.geo.aelum.oop.branch;
 
 public class Door {
-    boolean open = false;
-    String color;
-    double sizeX;
-    double sizeY;
-    double sizeZ;
+    private boolean open = false;
+    private String color;
+    private String name;
 
-    void open() {
+    Door(String name) {
+        this.name = name;
+    }
+
+
+    public void open() {
         this.open = true;
     }
 
-    void close() {
+    public void close() {
         this.open = false;
     }
 
-    boolean isOpen() {
+    public boolean isOpen() {
         return this.open;
     }
 
@@ -23,4 +26,7 @@ public class Door {
         this.color = color;
     }
 
+    public String getName() {
+        return name;
+    }
 }
