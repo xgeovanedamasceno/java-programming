@@ -2,11 +2,9 @@ package xd.geo.aelum.oop.branch;
 
 public class DoorTest {
     public static void main(String[] args) {
-        Door d = new Door();
+        Door d = new Door("d");
 
-        d.sizeX = 1.1;
-        d.sizeY = 1.8;
-        d.sizeZ = 0.05;
+
 
         d.open();
 
