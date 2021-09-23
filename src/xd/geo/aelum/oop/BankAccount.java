@@ -1,6 +1,6 @@
 package xd.geo.aelum.oop;
 
-public abstract class BankAccount {
+public abstract class BankAccount implements Comparable<BankAccount> {
     static int number;
     private int id;
     private String name;
@@ -109,12 +109,9 @@ public abstract class BankAccount {
 
     @Override
     public String toString() {
-        String stringInfo = "BankAccount{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", balance=" + balance +
-                ", openingDate=" + openingDate +
-                '}';
+        String stringInfo = "Name: " + this.getName() +
+                " N°Account: " + this.getId() +
+                " Balance: " + this.getBalance();
 
         return stringInfo.toUpperCase();
     }
@@ -147,4 +144,10 @@ public abstract class BankAccount {
     }
 
 
+    @Override
+    public int compareTo(BankAccount otherAc) {
+        if (this.getBalance() < otherAc.getBalance()) return -1;
+        else if (this.getBalance() > otherAc.getBalance()) return 1;
+        return 0;
+    }
 }

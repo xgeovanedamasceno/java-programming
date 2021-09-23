@@ -17,6 +17,13 @@ public class CheckingAccount extends BankAccount implements Taxable {
         super.setBalance(super.getBalance() - 0.10);
     }
 
+//    @Override
+//    public int compareTo(BankAccount otherAc) {
+//        if (this.getBalance() < otherAc.getBalance()) return -1;
+//        else if (this.getBalance() > otherAc.getBalance()) return 1;
+//        return 0;
+//    }
+
     @Override
     public void getDataForPrint() {
         System.out.println(this.getType());
@@ -29,3 +36,5 @@ public class CheckingAccount extends BankAccount implements Taxable {
         return this.getBalance() * 0.01;
     }
 }
+
+
