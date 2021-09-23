@@ -1,6 +1,6 @@
 package xd.geo.aelum.oop;
 
-public class SavingsAccount extends BankAccount {
+public class SavingsAccount extends BankAccount  {
 
 
     public SavingsAccount(Date date, String name) {
@@ -25,4 +25,12 @@ public class SavingsAccount extends BankAccount {
     protected String getType() {
         return "Savings Account";
     }
+
+
+//    @Override
+//    public int compareTo(BankAccount otherAc) {
+//        if (this.getBalance() < otherAc.getBalance()) return -1;
+//        else if (this.getBalance() > otherAc.getBalance()) return 1;
+//        return 0;
+//    }
 }
